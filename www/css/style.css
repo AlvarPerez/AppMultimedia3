@@ -1,0 +1,29 @@
+/* Empty. Add your own CSS if you like */
+
+
+.iniciLogo {
+    padding: 50px;
+}
+
+.fondoPrincipal {
+    background-image: url('/img/informatica.jpg');
+    opacity: 0.5;
+    height: 500px;
+}
+
+.fondoSecundario {
+    opacity: 1;
+}
+
+.contacto {
+    margin: 0 auto;
+}
+
+.contingut{
+    padding: 30px;
+}
+
+.titleConfiguracio {
+    padding-left: 20px;
+    padding-top: 10px;
+}
