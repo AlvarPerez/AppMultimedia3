@@ -1,14 +1,15 @@
 /* Empty. Add your own CSS if you like */
 
 
-.iniciLogo {
-    padding: 50px;
+.inici {
+	width:100%;
+    position:absolute;  
+    visibility:visible; 
+    z-index:1
 }
 
 .fondoPrincipal {
-    background-image: url('/img/informatica.jpg');
-    opacity: 0.5;
-    height: 500px;
+    width:100%;
 }
 
 .fondoSecundario {
@@ -27,3 +28,5 @@
     padding-left: 20px;
     padding-top: 10px;
 }
+
+

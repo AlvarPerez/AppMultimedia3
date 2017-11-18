@@ -40,56 +40,65 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+
+  //Inici
+  .state('tab.inici', {
+    url: '/inici',
     views: {
-      'tab-dash': {
+      'tab-inici': {
         templateUrl: 'templates/tab-inici.html',
-        controller: 'DashCtrl'
+        controller: 'IniciCtrl'
       }
     }
   })
 
+  //Cursos
   .state('tab.cursos', {
-      url: '/cursos',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-cursos.html',
-          controller: 'CursosCtrl'
-        }
-      }
-    })
-    .state('tab.curs-detail', {
-      url: '/cursos/:cursId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/curs-detall.html',
-          controller: 'CursDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
+    url: '/cursos',
     views: {
-      'tab-account': {
+      'tab-cursos': {
+        templateUrl: 'templates/tab-cursos.html',
+        controller: 'CursosCtrl'
+      }
+    }
+  })
+
+  //Curs-detail
+  .state('tab.curs-detail', {
+    url: '/cursos/:cursId',
+    views: {
+      'tab-cursos': {
+        templateUrl: 'templates/curs-detall.html',
+        controller: 'CursDetailCtrl'
+      }
+    }
+  })
+
+  //Curs-detail
+  .state('tab.configuracio', {
+    url: '/configuracio',
+    views: {
+      'tab-configuracio': {
         templateUrl: 'templates/tab-configuracio.html',
         controller: 'ConfiguracioCtrl'
       }
     }
   })
 
-    .state('tab.prova', {
-        url: '/prova',
-        views: {
-            'tab-account': {
-                templateUrl: 'templates/tab-prova.html',
-                controller: 'ProvaCtrl'
-            }
-        }
-    }) ;
+  //Prova
+  /*
+  .state('tab.prova', {
+    url: '/prova',
+    views: {
+      'tab-prova': {
+        templateUrl: 'templates/tab-prova.html',
+        controller: 'ProvaCtrl'
+      }
+    }
+  });
+  */
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
-
+  $urlRouterProvider.otherwise('/tab/inici');
+  
 });

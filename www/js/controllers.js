@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('IniciCtrl', function($scope) {
 
     $scope.nombre = 'Xavi';
 

@@ -1,23 +1,19 @@
-<!--
-Create tabs with an icon and label, using the tabs-positive style.
-Each tab's child <ion-nav-view> directive will have its own
-navigation history that also transitions its views in and out.
--->
+
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
 
-  <!-- Dashboard Tab -->
-  <ion-tab title="Inici" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/tab/dash">
-    <ion-nav-view name="tab-dash"></ion-nav-view>
+  <!-- Inici Tab -->
+  <ion-tab title="Inici" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/inici">
+    <ion-nav-view name="tab-inici"></ion-nav-view>
   </ion-tab>
 
-  <!-- Chats Tab -->
-  <ion-tab title="Cursos" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/cursos">
-    <ion-nav-view name="tab-chats"></ion-nav-view>
+  <!-- Cursos Tab -->
+  <ion-tab title="Cursos" icon-off="ion-ios-albums-outline" icon-on="ion-ios-albums" href="#/tab/cursos">
+    <ion-nav-view name="tab-cursos"></ion-nav-view>
   </ion-tab>
 
-  <!-- Account Tab -->
-  <ion-tab title="Configuració" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Configuració Tab -->
+  <ion-tab title="Configuració" icon-off="ion-ios-cog-outline" icon-on="ion-ios-cog" href="#/tab/configuracio">
+    <ion-nav-view name="tab-configuracio"></ion-nav-view>
   </ion-tab>
 
 
