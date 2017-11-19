@@ -12,9 +12,10 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CursosCtrl', function($scope) {
+.controller('CursosCtrl', function($scope, $http, ApiUrl) {
 
   $scope.cursos = [
+
       {
         id: 3950,
         titol: 'Crea apps mòbil amb html 5 i Iònic',
@@ -22,6 +23,7 @@ angular.module('starter.controllers', [])
         dates: 'del 8 al 29 de novembre (14 hores)',
         professor: 'Xavi Corral'
       },
+
       {
         id: 3953,
         titol: 'Aprofundeix amb les eines i mòduls de Photoshop',
@@ -31,9 +33,6 @@ angular.module('starter.controllers', [])
       }
   ];
 
-  /*
-  $scope.cursos = Cursos.all();
-   */
 })
 
 .controller('CursDetailCtrl', function($scope, $stateParams, Cursos) {
