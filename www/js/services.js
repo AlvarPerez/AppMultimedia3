@@ -49,7 +49,7 @@ angular.module('starter.services', [])
   };
 })
 
-.factory('Cursos', function() {
+.factory('Cursos', function($http,$q,apiUrl) {
 
   var llistaCursos = [
       {

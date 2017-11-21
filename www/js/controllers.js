@@ -1,5 +1,7 @@
 angular.module('starter.controllers', [])
 
+.constant('apiUrl','http://www.puntmultimedia.org/nova/wp-json/wp/v2/posts?categories=71')
+
 .controller('IniciCtrl', function($scope) {
 
     $scope.nombre = 'Xavi';
@@ -12,28 +14,23 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('CursosCtrl', function($scope, $http, ApiUrl) {
+.controller('CursosCtrl', function($scope, $http, apiUrl) {
 
-  $scope.cursos = [
-
-      {
-        id: 3950,
-        titol: 'Crea apps mòbil amb html 5 i Iònic',
-        horari: 'dimecres i divendres de 19  a 21 h',
-        dates: 'del 8 al 29 de novembre (14 hores)',
-        professor: 'Xavi Corral'
-      },
-
-      {
-        id: 3953,
-        titol: 'Aprofundeix amb les eines i mòduls de Photoshop',
-        horari: 'dilluns de 19  a 21 h',
-        dates: 'del 9 d’octubre al 20 de novembre (14 hores)',
-        professor: 'Marc Carmona'
-      }
-  ];
+    $http.get(apiUrl).then(
+        function(response) {
+            console.log('Ha ido todo bien!');
+            console.log(response);
+            $scope.cursos = response.data;
+        },
+        function(error) {
+            console.log('OJORRR ha fallado!!');
+            console.log(error);
+        }
+    );
 
 })
+
+
 
 .controller('CursDetailCtrl', function($scope, $stateParams, Cursos) {
     console.log('getting curs ' + $stateParams.cursId);
@@ -43,7 +40,7 @@ angular.module('starter.controllers', [])
 
 .controller('ConfiguracioCtrl', function($scope) {
   $scope.opcio = 'ES';
-})
+});
 
 /*
 .controller('ProvaCtrl', function($scope,$ionicBackdrop,$timeout) {
@@ -69,4 +66,9 @@ angular.module('starter.controllers', [])
     });
 
 })*/
-;
+
+
+
+
+
+
